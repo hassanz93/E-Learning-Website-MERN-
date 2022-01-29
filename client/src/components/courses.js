@@ -31,7 +31,10 @@ useEffect(() => {
 
         <p className="info__price">${course.price}</p>
 
+
         <Link to={`/courses/${course._id}`} className="info__button">
+
+    
           View
         </Link>
         
