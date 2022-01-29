@@ -1,4 +1,4 @@
-const coursesData = [
+ [
   {
   "_id": {
     "$oid": "61e8323003529a21cd27f2e5"
