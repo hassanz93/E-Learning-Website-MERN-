@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "61e95f6cf26c769438f90a44"
+  },
+  "name": "Mirna",
+  "email": "mirnajml367@gmail.com",
+  "username": "Mj",
+  "password": "mirna@123",
+  "admin": 1,
+  "courses": [],
+  "address": "Lebanon",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e95f9ef26c769438f90a47"
+  },
+  "name": "Hasan",
+  "email": "Hasan@gmail.com",
+  "username": "HZ",
+  "password": "hasan@123",
+  "admin": 0,
+  "courses": [
+    {
+      "$oid": "61e8323003529a21cd27f2e5"
+    },
+    {
+      "$oid": "61e93e2703529a21cd27f300"
+    }
+  ],
+  "address": "Lebanon",
+  "__v": 0
+}]
