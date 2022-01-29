@@ -24,37 +24,37 @@ function Home(){
             <p>Learn from an elite community of instructors, experts, and thought leaders with high-quality content.</p>
         </div>
     </section>
-    <section class="container features">
+    <section className="container features">
 			
 	
-			<div class="section-heading">
+			<div className="section-heading">
 							<h2>Our Features</h2>
 						
 						</div>
 	
-			<div class="row">
-				<div class="col-md-4">
-					<div class="featured-box">
-						<i class="fa fa-eye fa-2x"></i>
-						<div class="text">
+			<div className="row">
+				<div className="col-md-4">
+					<div className="featured-box">
+						<i className="fa fa-eye fa-2x"></i>
+						<div className="text">
 							<h3>Latest Courses</h3>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="featured-box">
-						<i class="fa fa-quote-right fa-2x"></i>
-						<div class="text">
+				<div className="col-md-4">
+					<div className="featured-box">
+						<i className="fa fa-quote-right fa-2x"></i>
+						<div className="text">
 							<h3>Assessment</h3>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="featured-box">
-						<i class="fa fa-arrows fa-2x"></i>
-						<div class="text">
+				<div className="col-md-4">
+					<div className="featured-box">
+						<i className="fa fa-arrows fa-2x"></i>
+						<div className="text">
 							<h3>Certificate</h3>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						</div>
