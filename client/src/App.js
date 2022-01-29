@@ -11,20 +11,6 @@ import  { useState, useEffect } from "react";
 
 function App() {
 
-  const [courses, setCourses] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:8000/courses")
-      .then(response => response.json())
-      .then(data => {
-        setCourses(data); // set users in state
-      });
-  }, []); // empty array because we only run once
-
-  const courseElement = courses.map(course =>{
-    return <Course image={course.image} title={course.title} category={course.category} description={course.description}
-                    price={course.price} _id = {course._id}  /> 
-  })
   return (
     <div className="App">
       
@@ -34,7 +20,7 @@ function App() {
 		<Route path='/' element={<Home />} />
 		<Route path='/signup' element={<SignUpUseState />} />
     <Route path='/signin' element={<SignInUseState />} />
-    <Route path='/courses' element={courseElement} />
+    <Route path='/courses' element={<Course />} />
 
     
          

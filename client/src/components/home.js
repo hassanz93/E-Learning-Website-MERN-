@@ -1,4 +1,4 @@
-// import './home.css';
+
 import React from 'react';
 import './style/home.css'
 import { Router, Route, Link, Routes, NavLink} from "react-router-dom";
@@ -13,9 +13,9 @@ function Home(){
             <div className="first-section-info-text">
                 <h2>Welcome to Udemy</h2>
                 <p>We Deliver Real Results</p>
-                <Link to='/'>
+                <Link to='/courses'>
                     <button color="info">Browse Courses </button>
-                    {' '}</Link>
+                    </Link>
             </div>
         </aside>
     </section>
