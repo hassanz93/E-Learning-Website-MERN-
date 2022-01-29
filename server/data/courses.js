@@ -1,4 +1,5 @@
-[{
+const coursesData = [
+  {
   "_id": {
     "$oid": "61e8323003529a21cd27f2e5"
   },
@@ -159,3 +160,5 @@
   },
   "__v": 0
 }]
+
+module.exports = coursesData;
