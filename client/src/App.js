@@ -4,9 +4,7 @@ import SignUpUseState from './components/signup';
 import Nav from './components/navigationbar';
 import SignInUseState from './components/login';
 import Course from './components/courses.js';
-import coursesData from "./data/courses"
 import { Route, NavLink, Routes } from "react-router-dom";
-import axios from "axios";
 import  { useState, useEffect } from "react";
 
 
@@ -25,7 +23,7 @@ function App() {
 
   const courseElement = courses.map(course =>{
     return <Course image={course.image} title={course.title} category={course.category} description={course.description}
-                    price={course.price} productId = {course.productId}  /> 
+                    price={course.price} _id = {course._id}  /> 
   })
   return (
     <div className="App">

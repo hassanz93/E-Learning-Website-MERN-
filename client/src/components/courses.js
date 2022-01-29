@@ -16,7 +16,7 @@ function Course(props){
 
         <p className="info__price">${props.price}</p>
 
-        <Link to={`/product/${props.productId}`} className="info__button">
+        <Link to={`/product/${props._id}`} className="info__button">
           View
         </Link>
         
