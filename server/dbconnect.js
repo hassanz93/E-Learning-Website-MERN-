@@ -14,7 +14,7 @@ dotenv.config();
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.DB_CONNECT, {
-    useNewUrlParser: true
+    useNewUrlParser: false
 }).then(() => {
     console.log('Database connected sucessfully !')
 },
