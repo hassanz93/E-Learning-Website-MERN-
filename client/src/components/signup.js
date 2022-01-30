@@ -64,6 +64,8 @@ const SignUpUseState = (props) => {
   return (
     <div>
       <div className="container signup">
+        <h1>Register</h1>
+        <br></br>
         <div className="form-div mt-5">
         <div className={className} style={AlertStyle} role="alert">{errorMessage} </div>
           <form onSubmit={handleSubmit}>

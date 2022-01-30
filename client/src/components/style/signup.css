@@ -1,9 +1,14 @@
 .signup{
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 .signupbutton  {
     background: #eb3933af !important;
     outline: none !important;
     border: none !important;
     color:rgb(46, 46, 46) !important;
+}
+
+.signup {
+    width: 600px;
+
 }
