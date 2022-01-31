@@ -1,24 +1,32 @@
-
 import "./style/courses.css";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import './style/home.css';
+import axios from "axios";
+import './style/home.css'
+ 
 
-function Course(){
-const [courses, setCourses] = useState([]);
+function Category1(){
+const [category, setCourses] = useState([]);
+const[searchParams] = useSearchParams()
+const Category1 = searchParams.get('category');
 
 useEffect(() => {
-  fetch("http://localhost:8000/courses")
-    .then(response => response.json())
-    .then(data => {
-      setCourses(data); // set users in state
+  
+  axios.get(`http://localhost:8000/courses?category=${Category1}`)
+  .then((response) => {
+			
+    setCourses(response.data)
+  
+    
+  }).catch((error) => {
+    console.log(error);
     });
 }, []); // empty array because we only run once
 
   
 
   return (
-    courses.map(course =>{
+    category.map(course =>{
       return(
     <div className="main"   key={course._id}>
     <div className="product">
@@ -46,4 +54,4 @@ useEffect(() => {
 })
   )
 }
-export default Course;
+export default Category1;

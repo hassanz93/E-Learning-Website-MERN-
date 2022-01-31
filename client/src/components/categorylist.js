@@ -8,7 +8,7 @@ function CategoryList(props) {
 
 return(
     
-    <li><NavLink to={`/category/${props.obj.category}`}>{props.obj.category}</NavLink></li>                                    
+    <li><NavLink to={`/courses/${props.obj.category}`}>{props.obj.category}</NavLink></li>                                    
 )
 }
 
