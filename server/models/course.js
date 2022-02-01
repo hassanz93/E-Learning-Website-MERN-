@@ -17,12 +17,7 @@ const coursesSchema = new Schema({
         enum : ['Programming-FrontEnd', 'Programming-BackEnd', 'Physics' ],
         required : true
     },
-    image: {
-        type : Number,
-        required : true,
-        trim : true
-
-    },
+   
     price : {
         type : Number,
         required : true,
@@ -34,12 +29,12 @@ const coursesSchema = new Schema({
             required : true,
             trim : true
         },
-        title : {
+        videotitle : {
             type : String,
             required : true,
             trim : true
         },
-        description :{
+        videodescription :{
             type : String,
             required : true,
             trim : true
@@ -51,12 +46,12 @@ const coursesSchema = new Schema({
     },
     buyers : {
         type : Number,
-        required : false,
+      
         default : 0
     } ,
     reviews :{
         type : Number,
-        required : true,
+    
         min:1,
         max:10
     },
