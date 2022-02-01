@@ -5,8 +5,9 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 
-const userRoute = require('./routes/userrouter');
-const courseRoute = require('./routes/courserouter');
+const userRoute = require('./routes/userrouter.js');
+const courseRoute = require('./routes/courserouter.js');
+const categoryRoute = require('./routes/categoryrouter.js');
 // const postRoute = require('./routes/post');
 
 
@@ -31,6 +32,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 app.use('/users', userRoute)
 app.use('/courses', courseRoute)
+app.use('/category', categoryRoute)
 
 
 

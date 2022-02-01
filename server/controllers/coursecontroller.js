@@ -13,16 +13,6 @@ exports.createCourse = async (req, res) => {
   res.send(course);
 };
 
-//find course by category
-exports.findCategory = async (req, res) => {
-  try {
-    const Category1 = req.query.category;
-    const category = await Course.find({category:Category1});
-    res.send(category);
-  } catch {
-    res.status(404).send({ error: "category is not found!" });
-  }
-};
 
 exports.updateCourse = async (req, res) => {
   try {

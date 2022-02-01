@@ -4,7 +4,7 @@ import './style/nav.css';
 
 
 function CategoryList(props) {
-	console.log(props.obj.category)
+	// console.log(props.obj.category)
 
 return(
     

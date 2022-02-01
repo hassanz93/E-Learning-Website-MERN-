@@ -1,7 +1,8 @@
 
 import React from 'react';
-import './style/home.css'
-import { Router, Route, Link, Routes, NavLink} from "react-router-dom";
+import './style/home.css';
+import './style/nav.css';
+import { Link} from "react-router-dom";
 
 function Home(){
  return(

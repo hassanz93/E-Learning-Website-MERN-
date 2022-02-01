@@ -4,22 +4,29 @@ import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import './style/home.css';
 import './style/nav.css';
+import axios from 'axios';
 
-function Course(){
-const [courses, setCourses] = useState([]);
+function Category3(){
+const [thirdCategory, setCategory] = useState([]);
+
 
 useEffect(() => {
-  fetch("http://localhost:8000/courses")
-    .then(response => response.json())
-    .then(data => {
-      setCourses(data); // set users in state
+  axios.get(`http://localhost:8000/category/?category=Physics`)
+    .then((response) => {
+
+      setCategory(response.data)
+
+
+    }).catch((error) => {
+      console.log(error);
     });
 }, []); // empty array because we only run once
 
-  
+
+  console.log('Result: ' + thirdCategory + "Final") 
 
   return (
-    courses.map(course =>{
+    thirdCategory.map(course =>{
       return(
     <div className="main"   key={course._id}>
     <div className="product">
@@ -47,4 +54,4 @@ useEffect(() => {
 })
   )
 }
-export default Course;
+export default Category3;

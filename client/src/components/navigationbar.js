@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './style/nav.css';
-import Home from './home';
-import SignUpUseState from './signup';
 import { Route, NavLink, Routes } from "react-router-dom";
 import CategoryList from "./categorylist";
 

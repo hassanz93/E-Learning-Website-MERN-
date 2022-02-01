@@ -1,32 +1,32 @@
+
 import "./style/courses.css";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import './style/home.css'
- 
+import './style/home.css';
+import './style/nav.css';
+import axios from 'axios';
 
 function Category1(){
-const [category, setCourses] = useState([]);
-const[searchParams] = useSearchParams()
-const Category1 = searchParams.get('category');
+const [firstCategory, setCategory] = useState([]);
+
 
 useEffect(() => {
-  
-  axios.get(`http://localhost:8000/courses?category=${Category1}`)
-  .then((response) => {
-			
-    setCourses(response.data)
-  
-    
-  }).catch((error) => {
-    console.log(error);
+  axios.get(`http://localhost:8000/category/?category=Programming-FrontEnd`)
+    .then((response) => {
+
+      setCategory(response.data)
+
+
+    }).catch((error) => {
+      console.log(error);
     });
 }, []); // empty array because we only run once
 
-  
+
+  console.log('Result: ' + firstCategory + "Final") 
 
   return (
-    category.map(course =>{
+    firstCategory.map(course =>{
       return(
     <div className="main"   key={course._id}>
     <div className="product">

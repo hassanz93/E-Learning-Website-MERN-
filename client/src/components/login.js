@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Link} from "react-router-dom";
 import axios from "axios";
-import './style/signup.css'
+import './style/signup.css';
+import './style/nav.css';
 
 const AlertStyle ={
   display: "none"
