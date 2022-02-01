@@ -10,8 +10,7 @@ function Course() {
     axios
       .get("http://localhost:8000/courses")
       .then((response) => {
-        setCourses(response.data);
-            })
+        setCourses(response.data);      })
       .catch((error) => {
         console.log(error);
       });
@@ -33,23 +32,11 @@ function Course() {
 
             <p className="info__price">${course.price}</p>
 
-<<<<<<< HEAD
             <Link to={`/courses/${course._id}`} className="info__button">
               View
             </Link>
           </div>
         </div>
-=======
-        <p className="info__price">${course.price}</p>
-
-
-        <Link to={`/courses/${course._id}`} className="info__button">
-
-    
-          View
-        </Link>
-        
->>>>>>> 9b4093bfc4e0f09b83c2b880434f43640b000aab
       </div>
     );
   });
