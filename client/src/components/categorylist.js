@@ -1,15 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import './style/nav.css';
 
 
 function CategoryList(props) {
 
 
 return(
-
-					
-                        <li><a href="#">{props.obj.category}</a></li>
-                    
-                   
+    
+    <li><NavLink to={`/courses/${props.obj.category}`}>{props.obj.category}</NavLink></li>                                    
 )
 }
 

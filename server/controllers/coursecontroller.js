@@ -13,13 +13,14 @@ exports.createCourse = async (req, res) => {
   res.send(course);
 };
 
-//find course by id
-exports.findCourse = async (req, res) => {
+//find course by category
+exports.findCategory = async (req, res) => {
   try {
-    const course = await Course.findById(req.params.id);
-    res.send(course);
+    const Category1 = req.query.category;
+    const category = await Course.find({category:Category1});
+    res.send(category);
   } catch {
-    res.status(404).send({ error: "course is not found!" });
+    res.status(404).send({ error: "category is not found!" });
   }
 };
 
@@ -52,3 +53,5 @@ exports.deleteCourse = async (req, res) => {
     res.status(404).send({ error: "course is not found!" });
   }
 };
+
+

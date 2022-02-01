@@ -1,12 +1,15 @@
 import React from 'react';
-import Home from './components/home';
-import SignUpUseState from './components/signup';
-import Nav from './components/navigationbar';
-import SignInUseState from './components/login';
+import Home from './components/home.js';
+import SignUpUseState from './components/signup.js';
+import Nav from './components/navigationbar.js';
+import SignInUseState from './components/login.js';
 import Course from './components/courses.js';
+
 import { Route, NavLink, Routes } from "react-router-dom";
 import  { useState, useEffect } from "react";
 import CourseDetails from './components/coursedetails'
+
+
 
 
 function App() {
@@ -21,7 +24,11 @@ function App() {
 		<Route path='/signup' element={<SignUpUseState />} />
     <Route path='/signin' element={<SignInUseState />} />
     <Route path='/courses' element={<Course />} />
+
    <Route path='/courses/:courseId' element={<CourseDetails />} />
+
+    
+
     
          
 		</Routes>
