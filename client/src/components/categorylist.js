@@ -6,6 +6,7 @@ import './style/nav.css';
 function CategoryList(props) {
 	// console.log(props.obj.category)
 
+
 return(
     
     <li><NavLink to={`/courses/${props.obj.category}`}>{props.obj.category}</NavLink></li>                                    

@@ -12,6 +12,7 @@ import { Route, Routes } from "react-router-dom";
 
 
 
+
 function App() {
 
   return (
@@ -26,11 +27,7 @@ function App() {
     <Route path='/courses' element={<Course />} />
     <Route path='/courses/Programming-FrontEnd' element={<Category1 />} /> 
     <Route path='/courses/Programming-BackEnd' element={<Category2 />} /> 
-    <Route path='/courses/Physics' element={<Category3 />} /> 
-    
-
-    
-         
+    <Route path='/courses/Physics' element={<Category3 />} />  
 		</Routes>
   </div>
   );

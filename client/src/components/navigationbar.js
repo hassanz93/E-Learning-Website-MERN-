@@ -31,11 +31,10 @@ function Nav() {
 	const displayData = () => {
 
 		
-       return  (   categ.map((data => {
-			
-		console.log(categ);
+       return  (   
+		   categ.map((data => {
+			console.log(data.category);
 				return <CategoryList obj={data} key={data._id} />;
-		
 		  })
 	   )
 		)}
