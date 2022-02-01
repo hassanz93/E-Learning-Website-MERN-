@@ -10,6 +10,7 @@ import CourseDetails from './components/coursedetails'
 
 
 function App() {
+
   return (
     <div className="App">
       
