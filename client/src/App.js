@@ -6,7 +6,7 @@ import SignInUseState from './components/login';
 import Course from './components/courses.js';
 import { Route, NavLink, Routes } from "react-router-dom";
 import  { useState, useEffect } from "react";
-
+import CourseDetails from './components/coursedetails'
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 		<Route path='/signup' element={<SignUpUseState />} />
     <Route path='/signin' element={<SignInUseState />} />
     <Route path='/courses' element={<Course />} />
-
+   <Route path='/courses/:courseId' element={<CourseDetails />} />
     
          
 		</Routes>

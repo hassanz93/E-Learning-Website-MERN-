@@ -23,6 +23,15 @@ exports.findCourse = async (req, res) => {
   }
 };
 
+exports.findCourseByCategory = async (req, res) => {
+  try {
+    const course_cat = await Course.find({category: categoryId });
+    res.send(course_cat);
+  } catch {
+    res.status(404).send({ error: "ct is not found!" });
+  }
+};
+
 exports.updateCourse = async (req, res) => {
   try {
     const course = await Course.findById(req.params.id);

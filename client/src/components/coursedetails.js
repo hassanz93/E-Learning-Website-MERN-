@@ -1,23 +1,28 @@
 import "./style/courses.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function Course() {
-  const [courses, setCourses] = useState([]);
+function CourseDetails() {
+  const [courses, setCourse] = useState([]);
+
+  const { courseId } = useParams();
+  // console.log(courseId);
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/courses")
+      .get("http://localhost:8000/courses/" + courseId)
       .then((response) => {
-        setCourses(response.data);
-            })
+        setCourse(response.data);
+        console.log(response.data);
+      })
       .catch((error) => {
         console.log(error);
       });
   });
 
-  return courses.map((course) => {
+  return(
+     courses.map((course) => {
     return (
       <div className="main" key={course._id}>
         <div className="product">
@@ -40,6 +45,7 @@ function Course() {
         </div>
       </div>
     );
-  });
+  }));
 }
-export default Course;
+
+export default CourseDetails;
