@@ -1,32 +1,36 @@
 
 import "./style/courses.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import './style/home.css';
 import './style/nav.css';
 import axios from 'axios';
 
 function Category1(){
-const [firstCategory, setCategory] = useState([]);
+const [course, setCourse] = useState([]);
+let { category } = useParams();
+  const [loading, setLoading] = useState(true);
 
+useEffect(() => { 
+  axios.get(`http://localhost:8000/category/?category=` + category)
 
-useEffect(() => {
-  axios.get(`http://localhost:8000/category/?category=Programming-FrontEnd`)
     .then((response) => {
-
-      setCategory(response.data)
-
+      
+      setCourse(response.data)
+      console.log(response.data)
+      setLoading(false);
 
     }).catch((error) => {
       console.log(error);
+      setLoading(false);
+
     });
-}, []); // empty array because we only run once
+}, [category]); 
 
-
-  console.log('Result: ' + firstCategory + "Final") 
+if(loading) return <><h1>LOADING....</h1></>
 
   return (
-    firstCategory.map(course =>{
+    course.map(course =>{
       return(
     <div className="main"   key={course._id}>
     <div className="product">
@@ -42,8 +46,6 @@ useEffect(() => {
 
 
         <Link to={`/courses/${course._id}`} className="info__button">
-
-    
           View
         </Link>
         

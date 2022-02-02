@@ -7,9 +7,11 @@ function CategoryList(props) {
 	// console.log(props.obj.category)
 
 
+
 return(
     
-    <li><NavLink to={`/courses/${props.obj.category}`}>{props.obj.category}</NavLink></li>                                    
+    <li><NavLink to={`/category/${props.obj.category}`}>{props.obj.category}</NavLink></li>        
+                                
 )
 }
 
