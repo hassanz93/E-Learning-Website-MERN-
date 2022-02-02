@@ -4,48 +4,49 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function CourseDetails() {
-  const [courses, setCourse] = useState([]);
+  const [course, setCourse] = useState({});
+  const [loading, setLoading] = useState(true);
 
-  const { courseId } = useParams();
-  // console.log(courseId);
+  const { id } = useParams();
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/courses/" + courseId)
+      .get("http://localhost:8000/courses/" + id)
       .then((response) => {
+        console.log("success");
+        console.log(response);
         setCourse(response.data);
-        console.log(response.data);
+        setLoading(false);
       })
       .catch((error) => {
-        console.log(error);
+        console.log("error");
+        setLoading(false);
       });
-  });
+  }, []); 
 
-  return(
-     courses.map((course) => {
-    return (
-      <div className="main" key={course._id}>
-        <div className="product">
-          <img src={course.image} alt={course.title} />
+  if(loading) return <><h1>LOADING....</h1></>
 
-          <div className="product__info">
-            <p className="info__name">{course.title}</p>
-            <p className="info__name">{course.category}</p>
+  return (
+    <>
+    <div className="main" key={course._id}>
+  <div className="product">
+    <img src={course.image} alt={course.title} />
 
-            <p className="info__description">
-              {course.description.substring(0, 100)}...
-            </p>
+    <div className="product__info">
+      <p className="info__name">{course.title}</p>
+      <p className="info__name">{course.category}</p>
 
-            <p className="info__price">${course.price}</p>
+      <p className="info__description">
+        {course.description.substring(0, 100)}...
+      </p>
 
-            <Link to={`/courses/${course._id}`} className="info__button">
-              View
-            </Link>
-          </div>
-        </div>
-      </div>
-    );
-  }));
+      <p className="info__price">${course.price}</p>
+
+    </div>
+  </div>
+</div>
+    </>
+  );
 }
 
 export default CourseDetails;

@@ -33,7 +33,6 @@ function Nav() {
 		
        return  (   
 		   categ.map((data => {
-			console.log(data.category);
 				return <CategoryList obj={data} key={data._id} />;
 		  })
 	   )
@@ -42,7 +41,7 @@ function Nav() {
 	
 
   return (
- 
+	
     <div className="navbar navbar-inverse">
 		<div className="container navbarcont">
 			<div className="navbar-header">

@@ -37,9 +37,9 @@ router.post('/uploadcourse', async (req, res) => {
  // CRUD for courses
 router.route('/').get( courseController.findCourses);
 router.route('/').post( courseController.createCourse);
+router.route('/:id').get( courseController.findCourseById);
 router.route('/:id').patch(courseController.updateCourse);
 router.route('/:id').delete(courseController.deleteCourse);
-router.route('/find/:category').get(courseController.findCourseByCategory);
  
 
 module.exports=router

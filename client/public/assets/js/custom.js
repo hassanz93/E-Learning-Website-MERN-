@@ -1,9 +1,4 @@
-/*
-Author: http://webthemez.com
-Note: Donate to remove backlink/credits in the footer(webthemez.com)--
-Any help: webthemez@gmail.com
-Licence: Creative Commons Attribution 3.0** - http://creativecommons.org/licenses/by/3.0/
-*/
+
 jQuery(document).ready(function ($) {
     
     //Set the carousel options

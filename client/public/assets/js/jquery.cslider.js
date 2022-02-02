@@ -1,8 +1,6 @@
 (function( $, undefined ) {
 		
-	/*
-	 * Slider object.
-	 */
+	
 	$.Slider 				= function( options, element ) {
 	
 		this.$el	= $( element );
