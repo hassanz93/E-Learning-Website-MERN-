@@ -4,7 +4,7 @@ import SignUpUseState from './components/signup.js';
 import Nav from './components/navigationbar.js';
 import SignInUseState from './components/login.js';
 import Course from './components/courses.js';
-import Category1 from './components/category1.js';
+import Category1 from './components/coursesBycategories.js';
 import CourseDetails from './components/coursedetails.js';
 import { Route, Routes } from "react-router-dom";
 
