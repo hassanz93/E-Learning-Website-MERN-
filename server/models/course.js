@@ -2,6 +2,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const coursesSchema = new Schema({
+    author: {
+        type : String,
+        trim : true
+    },
     title : {
         type : String,
         required : true,
@@ -21,7 +25,15 @@ const coursesSchema = new Schema({
     price : {
         type : Number,
         required : true,
-        trim : true
+    },
+    seats: {
+        type: Number,
+        min:10,
+        max:50
+    },
+    language : {
+        type : String,
+        enum : ['English', 'Arabic', 'French']
     },
     videos: [ {
         video : {
@@ -51,9 +63,14 @@ const coursesSchema = new Schema({
     } ,
     reviews :{
         type : Number,
-    
         min:1,
-        max:10
+        max:5
+    },
+    reviewsnumber :{
+        type : Number,
+    },
+    status :{
+        type : String,
     },
     image :{
         type:String,

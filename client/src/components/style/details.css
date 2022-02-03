@@ -1,0 +1,102 @@
+.bodycon-details{
+    display: flex;
+}
+
+
+.container-details{
+    margin-left: 230px;
+    margin-top: 50px;
+}
+
+.product-details{
+    max-width: 600px;
+    
+}
+
+.infoname-details{
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+}
+
+.infocategory-details{
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1.4rem;
+    color: #eb3933af !important;
+}
+
+.infodescription-details{
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.ratings-details,.extrainfo-details{
+    display: flex;
+}
+
+.highlight-details{
+    background-color: #eceb98;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.ratingstar-details,.ratingnumber-details,.students-details,.author-details,.uploaddate-details,.language-details{
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-left: 10px;
+}
+
+.buy-details{
+    max-width: 400px;
+    margin-left: 100px;
+    margin-top: 70px;
+    display: flex;
+    flex-flow:column;
+    border: 1px solid grey;
+    padding: 0.4rem;
+    align-items: center
+}
+
+.image-details{
+    width: 350px;
+    height: 225px;
+}
+
+.price-details{
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 3.2rem;
+    margin-top: 20px;
+    color: black !important;
+}
+
+.buttonBuy{
+    background-color: #8710d8; ;
+    height: 4.8rem;
+    width: 300px;
+    padding: 0 1.2rem;
+    display: inline-flex;
+    justify-content: center;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1.6rem;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+
+    .moneyback{
+        font-size: 1.2rem !important;
+    }
+
+    .panel{
+        margin-top: 50px;
+        text-decoration: none;
+    }

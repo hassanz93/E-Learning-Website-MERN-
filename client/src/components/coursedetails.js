@@ -1,7 +1,8 @@
-import "./style/courses.css";
-import { Link, useParams } from "react-router-dom";
+import "./style/details.css";
+import { Link, useParams} from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+
 
 function CourseDetails() {
   const [course, setCourse] = useState({});
@@ -27,25 +28,55 @@ function CourseDetails() {
   if(loading) return <><h1>LOADING....</h1></>
 
   return (
-    <>
-    <div className="main" key={course._id}>
-  <div className="product">
-    <img src={course.image} alt={course.title} />
-
-    <div className="product__info">
-      <p className="info__name">{course.title}</p>
-      <p className="info__name">{course.category}</p>
-
-      <p className="info__description">
-        {course.description.substring(0, 100)}...
+    <div className="bodycon-details">
+    <div className="container-details">
+    <div className="main-details" key={course._id}>
+    <div className="product-details">
+    <p className="infocategory-details">{course.category}</p>
+      <p className="infoname-details">{course.title}</p>
+      <p className="infodescription-details">
+        {course.description.substring(0, 10000)}...
       </p>
 
-      <p className="info__price">${course.price}</p>
+      <div className="ratings-details">
+        <div className="highlight-details">{course.status}</div>
+        <div className="ratingstar-details">Ratings: {course.reviews}/5</div>
+        <div className="ratingnumber-details">({course.reviewsnumber} likes)</div>
+        <div className="students-details">{course.buyers} students</div>
+      </div>
 
+      <div className="extrainfo-details">
+        <div className="author-details">Course by {course.author}</div>
+        <div className="uploaddate-details">{course.Date}</div>
+        <div className="language-details">Language: {course.language} </div>
+      </div>
+
+      <div >
+      <li className="panel">
+        <table>
+          <tr>
+            <td>
+					<a href="#" className="dropdown-toggle" data-toggle="dropdown">Vidoes <b ></b></a>
+						<ul className="dropdown-menu">
+            Hello gfgefrgergergr
+						</ul>
+            </td>
+            </tr>
+        </table>
+      </li>
+      </div>
     </div>
-  </div>
 </div>
-    </>
+</div>
+
+    <div className="buy-details">
+        <img src={course.image} alt={course.title} className="image-details" />
+        <div className="price-details"> ${course.price}</div>
+        <div className="seats-details"> Seats left: {course.seats}</div>
+        <button className='buttonBuy'>Buy Now</button>
+        <div className="moneyback">30-Day Money-Back Guarantee</div>
+      </div>
+    </div>
   );
 }
 
