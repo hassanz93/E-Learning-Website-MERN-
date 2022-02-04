@@ -2,6 +2,7 @@ import "./style/details.css";
 import { Link, useParams} from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import ReactTable from "react-table";  
 
 
 function CourseDetails() {
@@ -25,8 +26,9 @@ function CourseDetails() {
       });
   }, []); 
 
-  if(loading) return <><h1>LOADING....</h1></>
+  let i=1;
 
+  if(loading) return <><h1>LOADING....</h1></>
   return (
     <div className="bodycon-details">
     <div className="container-details">
@@ -51,23 +53,27 @@ function CourseDetails() {
         <div className="language-details">Language: {course.language} </div>
       </div>
 
-      <div >
-      <li className="panel">
-        <table>
-          <tr>
-            <td>
-					<a href="#" className="dropdown-toggle" data-toggle="dropdown">Vidoes <b ></b></a>
-						<ul className="dropdown-menu">
-            Hello gfgefrgergergr
-						</ul>
-            </td>
+      <h2 className="Course-title">Course Content</h2>
+
+      <table className="Tables">
+        <tr>
+          <th>Video Topic</th>
+          <th>Play Video</th>
+        </tr>
+            <tr>
+              <td>{course.videotitle1}</td>
+              <td>Preview</td>
             </tr>
-        </table>
-      </li>
-      </div>
+            <tr>
+              <td>{course.videotitle2}</td>
+              <td>Preview</td>
+            </tr>
+      </table>
+      
     </div>
 </div>
 </div>
+
 
     <div className="buy-details">
         <img src={course.image} alt={course.title} className="image-details" />

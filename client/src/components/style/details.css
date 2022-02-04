@@ -100,3 +100,29 @@
         margin-top: 50px;
         text-decoration: none;
     }
+
+    .Tables{
+        border: 1px solid black;
+        margin-top: 1rem;
+        
+    }
+
+    .Tables > tr {
+        border: 1px solid black;
+        
+    }
+
+    .Tables > tr > th,td {
+        width: 30rem;
+        padding-left: 1rem;
+    }
+
+    th {
+        font-weight: bold !important;
+        color: black !important;
+    }
+
+    .Course-title{
+        list-style: underline;
+        margin-top: 6rem;
+    }
