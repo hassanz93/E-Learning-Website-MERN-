@@ -26,9 +26,25 @@ function CourseDetails() {
       });
   }, []); 
 
-  let i=1;
+
+
+  const displayData = () => {
+    return course.videos.map((data) => {
+      return  ( 
+        <tr>
+         <td>
+        {data.videotitle}</td>
+        <td><a className="a-video" href={data.video}> Preview</a></td>
+        </tr>
+        )
+    });
+  };
 
   if(loading) return <><h1>LOADING....</h1></>
+
+  
+ 
+
   return (
     <div className="bodycon-details">
     <div className="container-details">
@@ -60,14 +76,11 @@ function CourseDetails() {
           <th>Video Topic</th>
           <th>Play Video</th>
         </tr>
-            <tr>
-              <td>{course.videotitle1}</td>
-              <td>Preview</td>
-            </tr>
-            <tr>
-              <td>{course.videotitle2}</td>
-              <td>Preview</td>
-            </tr>
+        {displayData()}
+        <tr>
+  
+  </tr>
+       
       </table>
       
     </div>
@@ -85,5 +98,6 @@ function CourseDetails() {
     </div>
   );
 }
+
 
 export default CourseDetails;
