@@ -48,7 +48,7 @@ function CourseDetails() {
       </div>
 
       <div className="extrainfo-details">
-        <div className="author-details">Course by {course.author}</div>
+        <div className="author-details">Course by {course.credit}</div>
         <div className="uploaddate-details">{course.Date}</div>
         <div className="language-details">Language: {course.language} </div>
       </div>
