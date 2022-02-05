@@ -55,7 +55,7 @@ function Nav() {
 				
 					
      
-					<li><a href="#">Upload Course</a></li>
+					<li><NavLink className="nav-link" to={"/uploadcourse"}> Upload Course </NavLink></li>
 					<li className="dropdown">
 						<a href="#" className="dropdown-toggle" data-toggle="dropdown">Categories <b className="caret"></b></a>
 						<ul className="dropdown-menu">

@@ -18,8 +18,14 @@ const coursesSchema = new Schema({
     },
     category : {
         type : String,
-        enum : ['Programming-FrontEnd', 'Programming-BackEnd', 'Physics' ],
-        required : true
+        required : true,
+        trim : true
+
+    },
+    seats: {
+        type: Number,
+        min:10,
+        max:50
     },
    
     price : {
@@ -55,6 +61,10 @@ const coursesSchema = new Schema({
     credit : {
         type : String,
         trim : true
+    },
+    language : {
+        type : String,
+        enum : ['English', 'Arabic', 'French']
     },
     buyers : {
         type : Number,
