@@ -40,6 +40,7 @@ const loginValidation = (data) =>{
     return schema.validate(data);
 };
 
+
 const objectSchema = Joi.object({
          video: Joi.string().required(),
          videotitle: Joi.string().required(),
@@ -47,8 +48,6 @@ const objectSchema = Joi.object({
 }).required();
 
 const arraySchema = Joi.array().items(objectSchema).min(1).required();
-
-
 
 const uploadCourseValidation= (data) =>{
    const schema = Joi.object ({ 
@@ -58,7 +57,9 @@ const uploadCourseValidation= (data) =>{
         image:  Joi.string().required(),
         price :Joi.number().required(),
         videos:Joi.alternatives().try(objectSchema, arraySchema).required(),
-        credit:Joi.string().required()
+        credit:Joi.string().required(),
+        language:Joi.string().required(),
+        seats:Joi.number().required().min(10).max(50)
 
  });
     return schema.validate(data);

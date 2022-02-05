@@ -22,7 +22,9 @@ const SignUpUseState = (props) => {
   const [className, setClassName] = useState('');
 
   const handleChange = (e) =>{
-      setUser({...user, [e.target.name] : e.target.value})
+      setUser({...user, [e.target.name] : e.target.value});
+        console.log(e.target.name);
+        
   }
 
   const handleSubmit = e =>{

@@ -15,14 +15,11 @@ router.post('/uploadcourse', async (req, res) => {
         description: req.body.description,
         category: req.body.category,
         price: req.body.price,
-        videos: [{
-                video :req.body.video,
-                videotitle : req.body.videotitle,
-                videodescription :req.body.videodescription,
-        }],
-                     
+        videos: req.body.videos,             
         credit : req.body.credit, 
         image :req.body.image,
+        language:req.body.language,
+        seats:req.body.seats
     });
   
     try {
