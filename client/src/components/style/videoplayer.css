@@ -1,0 +1,15 @@
+.video-title{
+    display: flex;
+    justify-content: center; 
+    margin-top: 75px;
+    color: black !important;
+    text-decoration-line: underline;
+}
+
+
+.video-player{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    
+}

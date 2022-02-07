@@ -1,8 +1,7 @@
 import "./style/details.css";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import ReactTable from "react-table";
 
 function CourseDetails() {
   const [course, setCourse] = useState({});
@@ -31,9 +30,9 @@ function CourseDetails() {
         <tr>
           <td>{data.videotitle}</td>
           <td>
-            <a className="a-video" href={data.video}>
+            <a className="a-video" href={`/courses/${course._id}/video`}>
               {" "}
-              Preview {data._id}
+              Preview
             </a>
           </td>
         </tr>

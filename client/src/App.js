@@ -8,6 +8,7 @@ import Category from './components/coursesBycategories.js';
 import CourseDetails from './components/coursedetails.js';
 import UploadCourse from './components/uploadcourse.js';
 import { AuthContextProvider } from './context/AuthContext.js';
+import VideoPlayer from './components/videoplayer';
 import { Route, Routes } from "react-router-dom";
 import  axios from 'axios';
 
@@ -29,6 +30,7 @@ function App() {
     <Route path='/courses/:id' element={<CourseDetails />} />
     <Route path='/category/:category' element={<Category />} /> 
     <Route path='/uploadcourse' element={<UploadCourse />} />
+    <Route path='/courses/:id/video' element={<VideoPlayer />} />
 
 		</Routes>
     </AuthContextProvider>
