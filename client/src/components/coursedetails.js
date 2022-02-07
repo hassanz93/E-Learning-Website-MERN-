@@ -1,9 +1,7 @@
 import "./style/details.css";
-import { Link, useParams} from "react-router-dom";
+import { useParams} from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import ReactTable from "react-table";  
-
 
 function CourseDetails() {
   const [course, setCourse] = useState({});
@@ -27,14 +25,13 @@ function CourseDetails() {
   }, []); 
 
 
-
   const displayData = () => {
     return course.videos.map((data) => {
       return  ( 
         <tr>
          <td>
         {data.videotitle}</td>
-        <td><a className="a-video" href={data.video}> Preview</a></td>
+        <td><a className="a-video" href={`/courses/${course._id}/video`}> Preview</a></td>
         </tr>
         )
     });
@@ -76,6 +73,7 @@ function CourseDetails() {
           <th>Video Topic</th>
           <th>Play Video</th>
         </tr>
+        
         {displayData()}
         <tr>
   
