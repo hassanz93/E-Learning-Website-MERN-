@@ -10,8 +10,7 @@ const cookieParser = require("cookie-parser");
 const userRoute = require('./routes/userrouter.js');
 const courseRoute = require('./routes/courserouter.js');
 const categoryRoute = require('./routes/categoryrouter.js');
-const videoRoute = require('./routes/videorouter.js');
-// const postRoute = require('./routes/post');
+
 
 
 dotenv.config();
@@ -44,7 +43,7 @@ app.use(cors( {
 app.use('/users', userRoute)
 app.use('/courses', courseRoute)
 app.use('/category', categoryRoute)
-app.use('/video', videoRoute)
+
 
 
 
