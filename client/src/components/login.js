@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { useNavigate, Link} from "react-router-dom";
 import axios from "axios";
 import './style/signup.css';
-import './style/nav.css';
+import AuthContext from "../context/AuthContext";
+
 
 const AlertStyle ={
   display: "none"
@@ -18,6 +20,9 @@ const SignInUseState = (props) => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const [className, setClassName] = useState('');
+
+  const {getLoggedIn} = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleChange = (e) =>{
       setUser({...user, [e.target.name] : e.target.value})
@@ -44,6 +49,8 @@ const SignInUseState = (props) => {
             setErrorMessage(("Logged In successfully"));
             setClassName("alert alert-success");
             document.getElementsByClassName("alert alert-success")[0].style.display = 'block';
+            getLoggedIn();
+            navigate("/");
           }
 
         }).catch((error) => {
@@ -65,12 +72,10 @@ const SignInUseState = (props) => {
       <div className="container signup">
       <h1>Login</h1>
       <br></br>
-        <div className="form-div mt-5">
+        <div className="form-div mt-5 form">
         <div className={className} style={AlertStyle} role="alert">{errorMessage} </div>
           <form onSubmit={handleSubmit}>
-           
-
-           
+          
             <input
               type="email"
               placeholder="E-mail"
@@ -96,12 +101,13 @@ const SignInUseState = (props) => {
               value="Login"
             />
           </form>
-          
+          <p>You Don't Have An Account <Link to='/signup'>click here</Link></p>
 
         </div>
       </div>
+    
+
     </div>
-  
     
   );
 };

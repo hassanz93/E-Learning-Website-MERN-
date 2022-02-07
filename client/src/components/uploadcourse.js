@@ -3,10 +3,16 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./style/uploadcourse.css";
 import "./style/nav.css";
+import AuthContext from "../context/AuthContext";
 
-const AlertStyle = {
-  display: "none",
-};
+
+
+
+
+
+  const AlertStyle = {
+    display: "none",
+  };
 
 const UploadCourse = () => {
   const [course, setCourse] = useState({
@@ -18,9 +24,9 @@ const UploadCourse = () => {
     credit: "",
     language:"",
         seats:10  });
-//   const [fields, setFields] = useState( [{ video: "", videotitle: "", videodescription: "" }] );
 
-//{ video: "", videotitle: "", videodescription: "" }
+
+        
   const [videoFields, setVideoFields ] = useState( [] );
   const [videoObj, setVideoObj] = useState({});
 
@@ -94,6 +100,8 @@ const UploadCourse = () => {
 
 
   return (
+  
+      
    <div className="container">
    <h1>Upload Course</h1>
 
@@ -232,8 +240,10 @@ const UploadCourse = () => {
         </div>
       </div>
       </div>
+     
   );
 };
+
 
 export default UploadCourse;
 

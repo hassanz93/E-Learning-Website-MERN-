@@ -52,6 +52,7 @@ h2, p{
 .second-section-info{
     text-align: center;
     font-size: larger;
+    letter-spacing: 1px;
 }
 
 .text h3{
@@ -81,25 +82,40 @@ h2, p{
 }
 .fourth-section-info{
     /* border: 1px solid red; */
-    background: rgba(171, 177, 171, 0.281);
-    width: 50%
+    background: rgba(209, 204, 204, 0.582);
+    width: 80%
 }
 .fourth-section-info-text{
     position: relative;
     top: 40%;
+    margin-left: 10rem;
+}
+.fourth-section-info-text Button {
+    width: 200px;
+    height: 60px;
+    outline: none;
+    background:#eb3933af;
+    border: none;
+    color:rgb(46, 46, 46) ;
+}
+.fourth-section-info-text Button:hover{
+    
+    background:rgba(212, 212, 212, 0.959);
 }
 .fourth-section .illustrated-image img{
     position: relative;
-    top: 12%;
-    right: 20%;
-    width: 500px;
+  
 }
 .footer-section{
-    height: 20vh;
-    background: black;
-    color: grey;
+    height: 4rem;
+    background:rgb(255, 255, 255) ;
+  border-top: 0!important;
+    font-size: small !important;
+    margin-top: 0 !important;
 }
-.footer-section-info{
+.infofooter{
+    color: rgba(88, 88, 88, 0.733) !important;
     position: relative;
-    top: 25%;
+    margin-top:2rem;
+    margin-left: 55rem;
 }

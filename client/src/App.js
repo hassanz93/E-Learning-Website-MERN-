@@ -7,17 +7,18 @@ import Course from './components/courses.js';
 import Category from './components/coursesBycategories.js';
 import CourseDetails from './components/coursedetails.js';
 import UploadCourse from './components/uploadcourse.js';
+import { AuthContextProvider } from './context/AuthContext.js';
 import { Route, Routes } from "react-router-dom";
+import  axios from 'axios';
 
 
-
-
+axios.defaults.withCredentials = true;
 
 function App() {
 
   return (
-    <div className="App">
-      
+  
+       <AuthContextProvider>
      <Nav />
 		<Routes>
 		
@@ -30,7 +31,8 @@ function App() {
     <Route path='/uploadcourse' element={<UploadCourse />} />
 
 		</Routes>
-  </div>
+    </AuthContextProvider>
+
   );
 }
 

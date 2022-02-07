@@ -1,5 +1,5 @@
 .product {
-    width: 600px;
+    height:50rem;
     padding: 1rem;
     background: #fff;
     cursor: pointer;
@@ -45,8 +45,12 @@
   }
   
   .info__button:hover {
-    background: #171717;
+    background: #eb3933af;
     color: #f4f4f4;
+  }
+  .row{
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
  

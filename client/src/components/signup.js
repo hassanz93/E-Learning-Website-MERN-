@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { Link} from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import './style/signup.css';
-import './style/nav.css';
+import AuthContext from "../context/AuthContext";
 
 const AlertStyle ={
   display: "none"
@@ -23,9 +23,12 @@ const SignUpUseState = (props) => {
 
   const handleChange = (e) =>{
       setUser({...user, [e.target.name] : e.target.value});
-        console.log(e.target.name);
+       
         
   }
+
+  const { getLoggedIn } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSubmit = e =>{
       e.preventDefault()
@@ -42,14 +45,19 @@ const SignUpUseState = (props) => {
   
       axios
         .post("http://localhost:8000/users/register", userData)
+       
         .then((response) => {
           console.log(response.status)
 
           if(response.status === 200 ){
+          
             setErrorMessage(("Signed Up successfully"));
             setClassName("alert alert-success")
             document.getElementsByClassName("alert alert-success")[0].style.display = 'block';
+            getLoggedIn();
+            navigate("/");
           }
+       
 
         }).catch((error) => {
          if( error.response.status === 400){ 
@@ -61,15 +69,15 @@ const SignUpUseState = (props) => {
         });
   
       console.log(userData);
-     
+  
     };
   
   return (
     <div>
       <div className="container signup">
         <h1>Register</h1>
-        <br></br>
-        <div className="form-div mt-5">
+       
+        <div className="form-div mt-5 form">
         <div className={className} style={AlertStyle} role="alert">{errorMessage} </div>
           <form onSubmit={handleSubmit}>
             <input
@@ -122,7 +130,7 @@ const SignUpUseState = (props) => {
               value="Submit"
             />
           </form>
-           <p>already have an account? click <Link to='/signIn'>here</Link></p>
+           <p>Already Have An Account?  <Link to='/signIn'>click here</Link></p>
 
         </div>
       </div>

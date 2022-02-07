@@ -51,14 +51,7 @@ const UserSchema=new Schema({
             required : true,
             trim: true
         },
-        accessToken : {
-            type: String,
-            required: false
-        },
-        tempToken : {
-            type: String,
-            required : false
-        },
+      
     },
     {timestamps: true }
 

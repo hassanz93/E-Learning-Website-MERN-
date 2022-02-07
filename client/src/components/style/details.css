@@ -75,7 +75,7 @@
 }
 
 .buttonBuy{
-    background-color: #8710d8; ;
+    background-color: #eb3933af; ;
     height: 4.8rem;
     width: 300px;
     padding: 0 1.2rem;
@@ -131,5 +131,5 @@
         margin-top: 6rem;
     }
 .a-video{
-    color: blue !important;
+    color: #eb3933af !important;
 }

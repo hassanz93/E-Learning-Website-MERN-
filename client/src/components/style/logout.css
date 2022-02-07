@@ -1,0 +1,14 @@
+.logoutbutton{
+    
+    background-color: transparent;
+    border: transparent;
+    color: rgb(85, 85, 85) !important;
+    font-size: large !important;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400 !important;
+    padding: 0  !important;
+  
+}
+.logoutbutton:hover{
+    color:#eb3933af !important;
+}

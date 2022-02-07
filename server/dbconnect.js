@@ -3,11 +3,14 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv')
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const cookieParser = require("cookie-parser");
+
 
 
 const userRoute = require('./routes/userrouter.js');
 const courseRoute = require('./routes/courserouter.js');
 const categoryRoute = require('./routes/categoryrouter.js');
+const videoRoute = require('./routes/videorouter.js');
 // const postRoute = require('./routes/post');
 
 
@@ -26,20 +29,22 @@ mongoose.connect(process.env.DB_CONNECT, {
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(cors());
+app.use(cors( {  
+     origin: [
+    "http://localhost:3000",
+   
+  ],
+       
+    credentials: true}
+));
 app.use('/users', userRoute)
 app.use('/courses', courseRoute)
 app.use('/category', categoryRoute)
-
-
-
-// app.all('*', (req, _, next) => {
-//     next(new AppError(`can not find route ${req.originalUrl} in this server`, 404))
-// })
-
+app.use('/video', videoRoute)
 
 
 
@@ -59,3 +64,4 @@ app.use(function (err, req, res, next) {
     if (!err.statusCode) err.statusCode = 500;
     res.status(err.statusCode).send(err.message);
 });
+

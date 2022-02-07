@@ -1,9 +1,8 @@
 import "./style/details.css";
-import { Link, useParams} from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import ReactTable from "react-table";  
-
+import ReactTable from "react-table";
 
 function CourseDetails() {
   const [course, setCourse] = useState({});
@@ -24,80 +23,84 @@ function CourseDetails() {
         console.log("error");
         setLoading(false);
       });
-  }, []); 
-
-
+  }, []);
 
   const displayData = () => {
     return course.videos.map((data) => {
-      return  ( 
+      return (
         <tr>
-         <td>
-        {data.videotitle}</td>
-        <td><a className="a-video" href={data.video}> Preview</a></td>
+          <td>{data.videotitle}</td>
+          <td>
+            <a className="a-video" href={data.video}>
+              {" "}
+              Preview {data._id}
+            </a>
+          </td>
         </tr>
-        )
+      );
     });
   };
 
-  if(loading) return <><h1>LOADING....</h1></>
-
-  
- 
+  if (loading)
+    return (
+      <>
+        <h1>LOADING....</h1>
+      </>
+    );
 
   return (
     <div className="bodycon-details">
-    <div className="container-details">
-    <div className="main-details" key={course._id}>
-    <div className="product-details">
-    <p className="infocategory-details">{course.category}</p>
-      <p className="infoname-details">{course.title}</p>
-      <p className="infodescription-details">
-        {course.description.substring(0, 10000)}...
-      </p>
+      <div className="container-details">
+        <div className="main-details" key={course._id}>
+          <div className="product-details">
+            <p className="infocategory-details">{course.category}</p>
+            <p className="infoname-details">{course.title}</p>
+            <p className="infodescription-details">
+              {course.description.substring(0, 10000)}...
+            </p>
 
-      <div className="ratings-details">
-        <div className="highlight-details">{course.status}</div>
-        <div className="ratingstar-details">Ratings: {course.reviews}/5</div>
-        <div className="ratingnumber-details">({course.reviewsnumber} likes)</div>
-        <div className="students-details">{course.buyers} students</div>
+            <div className="ratings-details">
+              <div className="highlight-details">{course.status}</div>
+              <div className="ratingstar-details">
+                Ratings: {course.reviews}/5
+              </div>
+              <div className="ratingnumber-details">
+                ({course.reviewsnumber} likes)
+              </div>
+              <div className="students-details">{course.buyers} students</div>
+            </div>
+
+            <div className="extrainfo-details">
+              <div className="author-details">Course by {course.credit}</div>
+              <div className="uploaddate-details">{course.Date}</div>
+              <div className="language-details">
+                Language: {course.language}{" "}
+              </div>
+            </div>
+
+            <h2 className="Course-title">Course Content</h2>
+
+            <table className="Tables">
+              <tr>
+                <th>Video Topic</th>
+                <th>Play Video</th>
+              </tr>
+              {displayData()}
+              <tr></tr>
+            </table>
+          </div>
+        </div>
       </div>
 
-      <div className="extrainfo-details">
-        <div className="author-details">Course by {course.credit}</div>
-        <div className="uploaddate-details">{course.Date}</div>
-        <div className="language-details">Language: {course.language} </div>
-      </div>
-
-      <h2 className="Course-title">Course Content</h2>
-
-      <table className="Tables">
-        <tr>
-          <th>Video Topic</th>
-          <th>Play Video</th>
-        </tr>
-        {displayData()}
-        <tr>
-  
-  </tr>
-       
-      </table>
-      
-    </div>
-</div>
-</div>
-
-
-    <div className="buy-details">
+      <div className="buy-details">
         <img src={course.image} alt={course.title} className="image-details" />
         <div className="price-details"> ${course.price}</div>
         <div className="seats-details"> Seats left: {course.seats}</div>
-        <button className='buttonBuy'>Buy Now</button>
+        <button className="buttonBuy">Buy Now</button>
         <div className="moneyback">30-Day Money-Back Guarantee</div>
       </div>
     </div>
   );
 }
-
 
 export default CourseDetails;

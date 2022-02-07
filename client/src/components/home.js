@@ -1,10 +1,13 @@
-
-import React from 'react';
+import React, { useContext, useState } from "react";
 import './style/home.css';
-import './style/nav.css';
+import AuthContext from "../context/AuthContext";
 import { Link} from "react-router-dom";
 
 function Home(){
+
+	
+
+	const { loggedIn } = useContext(AuthContext);
  return(
 
     <>
@@ -64,6 +67,30 @@ function Home(){
 			</div>
 
 		</section>
+		<section className="fourth-section">
+                    <aside className="fourth-section-info">
+                        <div className="fourth-section-info-text">
+                            <h2>Upload to Udemy</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+							{loggedIn === true && (
+             
+                            <Link to='/uploadCourse'><button style={{ width : '150px', padding : '10px' }} color='info'>Upload Course</button> {' '}</Link>
+							)}
+							 {loggedIn === false && (
+								     <Link to='/signup'><button style={{ width : '150px', padding : '10px' }} color='info'>Upload Course</button> {' '}</Link>
+							 )}
+									 </div>
+                    </aside>
+                <div className="illustrated-image">
+                    <img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/video_upload_3d4u.svg" alt=""/>
+                </div>
+            </section>
+			<footer className="footer-section">
+                <div className="footer-section-info">
+                  
+                    <p className="infofooter">Copyrights Reserved @2022</p>
+                </div>
+            </footer>
 	</>
 
  )

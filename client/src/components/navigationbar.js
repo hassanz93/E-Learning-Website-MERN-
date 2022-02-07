@@ -1,11 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import "./style/nav.css";
 import { Route, NavLink, Routes } from "react-router-dom";
 import CategoryList from "./categorylist";
+import AuthContext from "../context/AuthContext";
+import LogOutBtn from "./logout";
+
+
+
 
 function Nav() {
   const [categ, setCategorie] = useState([]);
+
+  const { loggedIn } = useContext(AuthContext);
 
   useEffect(() => {
     getCategories();
@@ -29,10 +36,11 @@ function Nav() {
   };
 
   return (
+    
     <div className="navbar navbar-inverse">
       <div className="container navbarcont">
         <div className="navbar-header">
-          <button
+        <button
             type="button"
             className="navbar-toggle"
             data-toggle="collapse"
@@ -44,8 +52,12 @@ function Nav() {
           </button>
           <a className="navbar-brand" href="index.html"></a>
         </div>
+     
         <div className="navbar-collapse collapse">
+        {loggedIn === false && (
+          <>
           <ul className="nav navbar-nav mainNav">
+            
             <li className="active">
               {" "}
               <NavLink className="nav-link" to={"/"}>
@@ -54,12 +66,7 @@ function Nav() {
               </NavLink>
             </li>
 
-            <li>
-              <NavLink className="nav-link" to={"/uploadcourse"}>
-                {" "}
-                Upload Course{" "}
-              </NavLink>
-            </li>
+           
             <li className="dropdown">
               <a href="#" className="dropdown-toggle" data-toggle="dropdown">
                 Categories <b className="caret"></b>
@@ -76,10 +83,47 @@ function Nav() {
               </NavLink>
             </li>
           </ul>
+          </>
+        )}
+         {loggedIn === true && (
+             <>
+             <ul className="nav navbar-nav mainNav">
+               
+               <li className="active">
+                 {" "}
+                 <NavLink className="nav-link" to={"/"}>
+                   {" "}
+                   Home{" "}
+                 </NavLink>
+               </li>
+               <li>
+              <NavLink className="nav-link" to={"/uploadcourse"}>
+                {" "}
+                Upload Course{" "}
+              </NavLink>
+            </li>
+             
+               <li className="dropdown">
+                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">
+                   Categories <b className="caret"></b>
+                 </a>
+                 <ul className="dropdown-menu">{displayData()}</ul>
+               </li>
+             </ul>
+             <ul className="nav navbar-nav pull-right mainNav">
+               
+               <LogOutBtn />
+            
+              
+             </ul>
+             </>
+             )}
         </div>
       </div>
     </div>
+  
   );
 }
 
 export default Nav;
+
