@@ -42,7 +42,7 @@ function Home(){
 						<i className="fa fa-eye fa-2x"></i>
 						<div className="text">
 							<h3>Latest Courses</h3>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							Take advantage of the variety of new courses uploaded each day and learn new skills to increase your chances of success in life.
 						</div>
 					</div>
 				</div>
@@ -51,7 +51,7 @@ function Home(){
 						<i className="fa fa-quote-right fa-2x"></i>
 						<div className="text">
 							<h3>Assessment</h3>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							Get a free assessment to help recommend you courses based on your preferences including current knowledge and skills.
 						</div>
 					</div>
 				</div>
@@ -60,7 +60,7 @@ function Home(){
 						<i className="fa fa-arrows fa-2x"></i>
 						<div className="text">
 							<h3>Certificate</h3>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							Earn a certificate to carry with you proudly. Certificates are available in different languages; English, Arabic, and French.
 						</div>
 					</div>
 				</div>
@@ -71,7 +71,7 @@ function Home(){
                     <aside className="fourth-section-info">
                         <div className="fourth-section-info-text">
                             <h2>Upload to Udemy</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Join the ranks and upload your own courses</p>
 							{loggedIn === true && (
              
                             <Link to='/uploadCourse'><button style={{ width : '150px', padding : '10px' }} color='info'>Upload Course</button> {' '}</Link>

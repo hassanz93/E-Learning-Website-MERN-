@@ -30,17 +30,20 @@ function Nav() {
   };
 
   const displayData = () => {
-    return categ.map((data) => {
+    let uniquecateg = categ.filter((ele, ind) =>
+      ind === categ.findIndex(elem =>
+        elem.id === ele.id && elem.category === ele.category))
+    return uniquecateg.map((data) => {
       return <CategoryList obj={data} key={data._id} />;
     });
   };
 
   return (
-    
+
     <div className="navbar navbar-inverse">
       <div className="container navbarcont">
         <div className="navbar-header">
-        <button
+          <button
             type="button"
             className="navbar-toggle"
             data-toggle="collapse"
@@ -52,76 +55,76 @@ function Nav() {
           </button>
           <a className="navbar-brand" href="index.html"></a>
         </div>
-     
-        <div className="navbar-collapse collapse">
-        {loggedIn === false && (
-          <>
-          <ul className="nav navbar-nav mainNav">
-            
-            <li className="active">
-              {" "}
-              <NavLink className="nav-link" to={"/"}>
-                {" "}
-                Home{" "}
-              </NavLink>
-            </li>
 
-           
-            <li className="dropdown">
-              <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                Categories <b className="caret"></b>
-              </a>
-              <ul className="dropdown-menu">{displayData()}</ul>
-            </li>
-          </ul>
-          <ul className="nav navbar-nav pull-right mainNav">
-            <li>
-              {" "}
-              <NavLink className="nav-link" to={"/signup"}>
-                {" "}
-                SignUp{" "}
-              </NavLink>
-            </li>
-          </ul>
-          </>
-        )}
-         {loggedIn === true && (
-             <>
-             <ul className="nav navbar-nav mainNav">
-               
-               <li className="active">
-                 {" "}
-                 <NavLink className="nav-link" to={"/"}>
-                   {" "}
-                   Home{" "}
-                 </NavLink>
-               </li>
-               <li>
-              <NavLink className="nav-link" to={"/uploadcourse"}>
-                {" "}
-                Upload Course{" "}
-              </NavLink>
-            </li>
-             
-               <li className="dropdown">
-                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                   Categories <b className="caret"></b>
-                 </a>
-                 <ul className="dropdown-menu">{displayData()}</ul>
-               </li>
-             </ul>
-             <ul className="nav navbar-nav pull-right mainNav">
-               
-               <LogOutBtn />
-            
-              
-             </ul>
-             </>
-             )}
+        <div className="navbar-collapse collapse">
+          {loggedIn === false && (
+            <>
+              <ul className="nav navbar-nav mainNav">
+
+                <li className="active">
+                  {" "}
+                  <NavLink className="nav-link" to={"/"}>
+                    {" "}
+                    Home{" "}
+                  </NavLink>
+                </li>
+
+
+                <li className="dropdown">
+                  <a href="#" className="dropdown-toggle" data-toggle="dropdown">
+                    Categories <b className="caret"></b>
+                  </a>
+                  <ul className="dropdown-menu">{displayData()}</ul>
+                </li>
+              </ul>
+              <ul className="nav navbar-nav pull-right mainNav">
+                <li>
+                  {" "}
+                  <NavLink className="nav-link" to={"/signup"}>
+                    {" "}
+                    SignUp{" "}
+                  </NavLink>
+                </li>
+              </ul>
+            </>
+          )}
+          {loggedIn === true && (
+            <>
+              <ul className="nav navbar-nav mainNav">
+
+                <li className="active">
+                  {" "}
+                  <NavLink className="nav-link" to={"/"}>
+                    {" "}
+                    Home{" "}
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="nav-link" to={"/uploadcourse"}>
+                    {" "}
+                    Upload Course{" "}
+                  </NavLink>
+                </li>
+
+                <li className="dropdown">
+                  <a href="#" className="dropdown-toggle" data-toggle="dropdown">
+                    Categories <b className="caret"></b>
+                  </a>
+                  <ul className="dropdown-menu">{displayData()}</ul>
+                </li>
+              </ul>
+              <ul className="nav navbar-nav pull-right mainNav">
+
+                <LogOutBtn />
+
+
+              </ul>
+            </>
+          )}
         </div>
       </div>
     </div>
-  
+
   );
 }
 
