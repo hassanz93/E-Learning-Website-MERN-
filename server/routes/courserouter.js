@@ -6,7 +6,7 @@ const { uploadCourseValidation} = require('../validation.js');
 const courseController = require("../controllers/coursecontroller.js");
 const auth = require("../middelware/auth");
 
-router.post('/uploadcourse',auth, async (req, res) => {
+router.post('/uploadcourse', async (req, res) => {
 
     const {error} = uploadCourseValidation(req.body);
     if(error) return res.status(400).send({message: error.details[0].message} );

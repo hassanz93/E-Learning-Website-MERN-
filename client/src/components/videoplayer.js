@@ -24,17 +24,22 @@ function VideoPlayer() {
 
 
   const displayTitle = () => {
-    return course.videos?.map((data) => {
+    return course.videos.map((data) => {
 
 
       return (
-        <div>
+        <div className="container">
           <h2 className='video-title'>{data.videotitle} </h2>
-          <div className="video-player">
+          <div className="row">
+          <div className="video-player col-md-6">
 
             <ReactPlayer
               controls={true}
               url={`${data.video}`} />
+              </div>
+              <div className="video-desc col-md-6">
+                {data.videodescription}
+              </div>
           </div>
         </div>
       )

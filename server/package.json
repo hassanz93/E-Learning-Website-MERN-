@@ -5,7 +5,7 @@
   "main": "dbconnect.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon server.js"
+    "serve": "node ./dbconnect.js"
   },
   "author": "",
   "license": "ISC",
