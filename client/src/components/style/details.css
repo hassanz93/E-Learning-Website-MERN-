@@ -102,8 +102,8 @@
         text-decoration: none;
     }
 
-    .Tables{
-        border: 1px solid black;
+    .coursecontent{
+        border: 0.5px solid black;
         margin-top: 1rem;
         
             margin-bottom: 2rem;
@@ -112,12 +112,14 @@
     }
 
     
-    .Tables > tr > th,td {
+    .coursecontent > tr > th,td {
         width: 30rem;
         padding-left: 1rem;
-        border: 0.1px solid black !important;
-    }
+        border-bottom: 0.01px solid black !important;
+        border-right: 0.01px solid black !important;
 
+    }
+   
     th {
         font-weight: bold !important;
         color: black !important;

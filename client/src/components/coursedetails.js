@@ -91,14 +91,16 @@ function CourseDetails() {
 
             <h2 className="Course-title">Course Content</h2>
 
-            <table className="Tables">
+            <table className="Tables coursecontent">
               <tr>
                 <th>Video Topic</th>
                 <th>Play Videos</th>
               </tr>
               <tr>
               {displayData()}
+              <td>
               {displayPreview()}
+              </td>
               </tr>
               
             </table>
