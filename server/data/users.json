@@ -1,32 +1,307 @@
 [{
   "_id": {
-    "$oid": "61e95f6cf26c769438f90a44"
+    "$oid": "61f55ec71b37ae3855a258cb"
   },
-  "name": "Mirna",
-  "email": "mirnajml367@gmail.com",
-  "username": "Mj",
-  "password": "mirna@123",
+  "name": "mirna123",
+  "email": "mirnajml@gmail.com",
+  "username": "mirnajml",
+  "password": "$2b$10$V.uQKMHzr0YZ6dhs/5qeHeMZOvgeLZ0Z.1yk3dERBbXDNlMAZj12W",
   "admin": 1,
   "courses": [],
-  "address": "Lebanon",
+  "address": "lebanon",
+  "createdAt": {
+    "$date": "2022-01-29T15:35:35.546Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T15:35:35.546Z"
+  },
   "__v": 0
 },{
   "_id": {
-    "$oid": "61e95f9ef26c769438f90a47"
+    "$oid": "61f55ef51b37ae3855a258cf"
   },
-  "name": "Hasan",
-  "email": "Hasan@gmail.com",
-  "username": "HZ",
-  "password": "hasan@123",
+  "name": "hasan123",
+  "email": "hasan@gmail.com",
+  "username": "hasaz88",
+  "password": "$2b$10$cO4d6Yh9TdEw/M8umNEGu../RKmy5caOaiuE4cx3cr31Tqmzke1o6",
   "admin": 0,
-  "courses": [
-    {
-      "$oid": "61e8323003529a21cd27f2e5"
-    },
-    {
-      "$oid": "61e93e2703529a21cd27f300"
-    }
-  ],
-  "address": "Lebanon",
+  "courses": [],
+  "address": "lebanon",
+  "createdAt": {
+    "$date": "2022-01-29T15:36:21.862Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-29T15:36:21.862Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61ffb932653e62cc7909b7c5"
+  },
+  "name": "mirnajml",
+  "email": "mirnal@gmail.com",
+  "username": "mjml999",
+  "password": "$2b$10$8J9leEiJk/vH8Ddx6TlmP.UdKdXwS/2dNMyNvfiBTIOT4ohTxZ8vW",
+  "admin": 0,
+  "courses": [],
+  "address": "lebanon",
+  "createdAt": {
+    "$date": "2022-02-06T12:04:02.455Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-06T12:04:02.455Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62002cfc6f3c6df81dacb1bd"
+  },
+  "name": "Rudy Metz",
+  "email": "your.email+fakedata62428@gmail.com",
+  "username": "Eldred.Ebert",
+  "password": "$2b$10$k58V9ITa/ayo4DDf34HXk.orTZPgzahAWDY1q51RM65JMwXWWgnGm",
+  "admin": 0,
+  "courses": [],
+  "address": "7198 Emmerich Shores",
+  "createdAt": {
+    "$date": "2022-02-06T20:18:04.981Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-06T20:18:04.981Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6200e5366f3c6df81dacb1d7"
+  },
+  "name": "Archibald Haag",
+  "email": "your.email+fakedata18783@gmail.com",
+  "username": "Dahlia_Dickens",
+  "password": "$2b$10$IFPYVN5XPezeIUGxUrJoruskpyxSziQXn5oqDdxYXm6fYEXEvLyWi",
+  "admin": 0,
+  "courses": [],
+  "address": "2285 Lang Forks",
+  "createdAt": {
+    "$date": "2022-02-07T09:24:06.526Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-07T09:24:06.526Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6200e5ab6f3c6df81dacb1f1"
+  },
+  "name": "Orland Ankunding",
+  "email": "your.email+fakedata75728@gmail.com",
+  "username": "Mary_Walter80",
+  "password": "$2b$10$eZqLoZ.tlOYutx6vv6xm4u01vVhFpVDVkxRQYkj98XhrVoomhhZbq",
+  "admin": 0,
+  "courses": [],
+  "address": "593 Alba Trail",
+  "createdAt": {
+    "$date": "2022-02-07T09:26:03.526Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-07T09:26:03.526Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6200e5f56f3c6df81dacb20b"
+  },
+  "name": "Karli Nader",
+  "email": "your.email+fakedata65655@gmail.com",
+  "username": "Kaya_Muller",
+  "password": "$2b$10$BpQsfbBey3kddYBrSMq7Yu.cgwid1p0.8DxKPBPQlCyaCiTmSnaJm",
+  "admin": 0,
+  "courses": [],
+  "address": "47270 Oscar Forge",
+  "createdAt": {
+    "$date": "2022-02-07T09:27:17.761Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-07T09:27:17.761Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6200e6936f3c6df81dacb230"
+  },
+  "name": "Lori Kilback",
+  "email": "your.email+fakedata45620@gmail.com",
+  "username": "Carlie49",
+  "password": "$2b$10$rMqBRLXXCfXIVG9ntXNB5.ftMzppGPcTw.BZ71HTx5ahSkzOeDJd2",
+  "admin": 0,
+  "courses": [],
+  "address": "498 Lisa Lakes",
+  "createdAt": {
+    "$date": "2022-02-07T09:29:55.462Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-07T09:29:55.462Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6200e7ff6f3c6df81dacb255"
+  },
+  "name": "Jay Kerluke",
+  "email": "your.email+fakedata29588@gmail.com",
+  "username": "Kathleen_Johnson87",
+  "password": "$2b$10$q2t5Ww5aN6KkmMrwGImbE..VOy1Gb2keLKWh2wQ0IkYMaFKd96UYK",
+  "admin": 0,
+  "courses": [],
+  "address": "795 Jacobson Underpass",
+  "createdAt": {
+    "$date": "2022-02-07T09:35:59.307Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-07T09:35:59.307Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6200e90f6f3c6df81dacb264"
+  },
+  "name": "Arne Hoppe",
+  "email": "your.email+fakedata69098@gmail.com",
+  "username": "Adella_Becker",
+  "password": "$2b$10$Ui60Uk3K2tfvzTeXE9yBuuu3zHFoogcZBhs2dXCgA4OuwLKXIErZq",
+  "admin": 0,
+  "courses": [],
+  "address": "4 Malachi Well",
+  "createdAt": {
+    "$date": "2022-02-07T09:40:31.594Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-07T09:40:31.594Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6200ee386f3c6df81dacb294"
+  },
+  "name": "Tomasa Flatley",
+  "email": "your.email+fakedata39706@gmail.com",
+  "username": "Camylle_Kunde97",
+  "password": "$2b$10$tWXLnwlMiy8Gtv9j4b8ydefa/wK7EYHnWeSK/eXibTrpUM.yU1YOi",
+  "admin": 0,
+  "courses": [],
+  "address": "5615 Lavonne Points",
+  "createdAt": {
+    "$date": "2022-02-07T10:02:32.326Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-07T10:02:32.326Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6200ff816f3c6df81dacb366"
+  },
+  "name": "Adela O'Connell",
+  "email": "your.email+fakedata36778@gmail.com",
+  "username": "Halle81",
+  "password": "$2b$10$QTj6o95Zz2.F/qdETvyg5.zMWtrRwAO.4pKlv7nrG4IZZKimKeNLa",
+  "admin": 0,
+  "courses": [],
+  "address": "9038 Lue Wall",
+  "createdAt": {
+    "$date": "2022-02-07T11:16:17.598Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-07T11:16:17.598Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6200ffa96f3c6df81dacb36a"
+  },
+  "name": "Ivah O'Keefe",
+  "email": "your.email+fakedata11631@gmail.com",
+  "username": "Odessa.Hoppe35",
+  "password": "$2b$10$B8gWe0cOV8MvtWjogxHSX.ATaUrgMswerCObQ3n.DvBIxt1T3ts8e",
+  "admin": 0,
+  "courses": [],
+  "address": "5810 Conroy Centers",
+  "createdAt": {
+    "$date": "2022-02-07T11:16:57.601Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-07T11:16:57.601Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6200ffc46f3c6df81dacb379"
+  },
+  "name": "Helga Hodkiewicz",
+  "email": "your.email+fakedata74993@gmail.com",
+  "username": "Madie_Harvey",
+  "password": "$2b$10$hQxhynyQ1td9sP252/Kog.8kBG53dUcL2PK5aMi6OCGyQe0WlQaAq",
+  "admin": 0,
+  "courses": [],
+  "address": "1127 Russel Fall",
+  "createdAt": {
+    "$date": "2022-02-07T11:17:24.057Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-07T11:17:24.057Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6200ffcc6f3c6df81dacb37d"
+  },
+  "name": "Shana Wilkinson",
+  "email": "your.email+fakedata33950@gmail.com",
+  "username": "Olin.Barton",
+  "password": "$2b$10$YyiHra6dd846L0ShJJmf4ecAX/4bHC9tThJRjOvv7d/OKvEszAi4O",
+  "admin": 0,
+  "courses": [],
+  "address": "52585 Josiane Drive",
+  "createdAt": {
+    "$date": "2022-02-07T11:17:32.216Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-07T11:17:32.216Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620100236f3c6df81dacb38c"
+  },
+  "name": "Milo Witting",
+  "email": "your.email+fakedata50332@gmail.com",
+  "username": "Rosa_Blick46",
+  "password": "$2b$10$k9SsWBgtIa7CzsGRNRqDhe5I7ZCDpZnLL9hE.juj8N5PJ0NdgEFsO",
+  "admin": 0,
+  "courses": [],
+  "address": "25961 Goldner Drive",
+  "createdAt": {
+    "$date": "2022-02-07T11:18:59.174Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-07T11:18:59.174Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6201093460c6425fdc9f1d3e"
+  },
+  "name": "Zena Kertzmann",
+  "email": "your.email+fakedata29307@gmail.com",
+  "username": "Hildegard.Ritchie7",
+  "password": "$2b$10$sCXxBxks5/vUmid41HCOC.FYb355KWL.MjDwIPw8BMKfqNXX5rf2O",
+  "admin": 0,
+  "courses": [],
+  "address": "139 Avis Bypass",
+  "createdAt": {
+    "$date": "2022-02-07T11:57:40.961Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-07T11:57:40.961Z"
+  },
   "__v": 0
 }]
