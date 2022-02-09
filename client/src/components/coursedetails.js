@@ -24,21 +24,33 @@ function CourseDetails() {
       });
   }, []);
 
-  const displayData = () => {
-    return course.videos.map((data) => {
+  const displayData = () => { 
+    return course.videos.map((data) => { 
       return (
         <tr>
           <td>{data.videotitle}</td>
-          <td>
-            <a className="a-video" href={`/courses/${course._id}/video`}>
-              {" "}
-              Preview
-            </a>
-          </td>
-        </tr>
+          
+          </tr>
+       
       );
-    });
+      
+    })
+    
+    
+    ;
   };
+  const displayPreview=() =>{
+    return (
+
+    <td rowSpan={course.videos.length}>
+      <a className="a-video" href={`/courses/${course._id}/video`}>
+        {" "}
+        Preview
+      </a>
+    </td>
+    )
+  
+  }
 
   if (loading)
     return (
@@ -82,10 +94,13 @@ function CourseDetails() {
             <table className="Tables">
               <tr>
                 <th>Video Topic</th>
-                <th>Play Video</th>
+                <th>Play Videos</th>
               </tr>
+              <tr>
               {displayData()}
-              <tr></tr>
+              {displayPreview()}
+              </tr>
+              
             </table>
           </div>
         </div>

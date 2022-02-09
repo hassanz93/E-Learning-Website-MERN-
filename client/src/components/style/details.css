@@ -111,14 +111,11 @@
       
     }
 
-    .Tables > tr {
-        border: 1px solid black;
-        
-    }
-
+    
     .Tables > tr > th,td {
         width: 30rem;
         padding-left: 1rem;
+        border: 0.1px solid black !important;
     }
 
     th {
